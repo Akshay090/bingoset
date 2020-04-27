@@ -1,8 +1,8 @@
 Metadata-Version: 1.2
 Name: bingoset
-Version: 0.1.0
+Version: 0.1.6
 Summary: UNKNOWN
-Home-page: UNKNOWN
+Home-page: https://github.com/Akshay090/bingoset
 Author: Akshay Ashok
 Author-email: aks28id@gmail.com
 License: UNKNOWN
@@ -14,7 +14,10 @@ Description: <h4 align="center">
             <br>
              CLI Toolkit to quickly create image dataset using Bing Image Search API
         
-        ![Twitter Follow](https://img.shields.io/twitter/follow/aks2899?style=social)
+        ![PyPI - License](https://img.shields.io/pypi/l/bingoset?style=plastic)
+        ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/bingoset)
+        ![Twitter Follow](https://img.shields.io/twitter/follow/aks2899?style=social) 
+        
         </h4>
         
         # Welcome to BingoSet 
@@ -40,17 +43,27 @@ Description: <h4 align="center">
         ```
         This will download 250 (default) images of pikachu into a directory called dataset (default)
         
-        ## Additional Config
+        ## Additional/Optional Config
         
         ```sh
         bingoset set-max-results 100
         ```
-        Change the number of images you want to download, eg : 100
+        Change the maximum number of images per request by the Bing API, eg : 100
+        DEFAULT : 250
         
         ```sh
         bingoset set-group-size 20
         ```
         Change the group size of images you want to download, eg : 100
+        groupsize is number of search results to return “per page”
+        DEFAULT : 50
+        
+        
+        ```sh
+        bingoset set-base-folder-name mydatast
+        ```
+        Change the base folder name
+        DEFAULT : dataset
         
 Platform: UNKNOWN
 Requires-Python: >=3.7,<4.0

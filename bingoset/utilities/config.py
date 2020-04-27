@@ -6,7 +6,7 @@ import os
 config = ConfigParser()
 
 
-APP_NAME = "bing-img-search"
+APP_NAME = "bingoset"
 app_dir = typer.get_app_dir(APP_NAME)
 app_dir = Path(app_dir)
 app_dir.mkdir(parents=True, exist_ok=True)

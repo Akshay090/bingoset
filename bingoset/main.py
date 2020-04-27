@@ -1,5 +1,6 @@
 import typer
 from bingoset.search_bing_api import get_images_bing
+from bingoset.utilities.checks import check_config
 from bingoset.utilities.config import write_config, read_config, initialize_config
 
 app = typer.Typer()
@@ -51,7 +52,8 @@ def q(query: str):
     """
       Search query to search Bing Image API for
       """
+    API_KEY = check_config()
     MAX_RESULTS = read_config('main', 'max_results', 'int')
     GROUP_SIZE = read_config('main', 'group_size', 'int')
     BASE_FOLDER_NAME = read_config('main', 'BASE_FOLDER_NAME', 'str')
-    get_images_bing(query, MAX_RESULTS, GROUP_SIZE, BASE_FOLDER_NAME)
+    get_images_bing(query, API_KEY, MAX_RESULTS, GROUP_SIZE, BASE_FOLDER_NAME)

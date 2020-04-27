@@ -1,20 +1,14 @@
 from requests import exceptions
 import requests
 from PIL import Image
-import os
 from pathlib import Path
 import os
 from urllib.parse import urlparse
 
-
-from bingoset.utilities.checks import check_config
-
 # MAX_RESULTS = 250
 # GROUP_SIZE = 50
 
-
-def get_images_bing(search_term, MAX_RESULTS, GROUP_SIZE, BASE_FOLDER_NAME):
-    API_KEY = check_config()
+def get_images_bing(search_term, API_KEY, MAX_RESULTS, GROUP_SIZE, BASE_FOLDER_NAME):
 
     URL = "https://api.cognitive.microsoft.com/bing/v7.0/images/search"
 
