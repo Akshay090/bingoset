@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: bingoset
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Akshay Ashok
+Author-email: aks28id@gmail.com
+License: UNKNOWN
+Description: # Welcome to BingoSet 
+        ## CLI Toolkit to quickly create image dataset using Bing image search api
+        
+        
+Platform: UNKNOWN
+Requires-Python: >=3.7,<4.0
