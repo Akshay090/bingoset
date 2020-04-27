@@ -1,9 +1,11 @@
 [tool.poetry]
 name = "bingoset"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["Akshay Ashok <aks28id@gmail.com>"]
 readme = "README.md"
+repository = "https://github.com/Akshay090/bingoset"
+license = "MIT"
 
 [tool.poetry.scripts]
 bingoset = "bingoset.main:app"

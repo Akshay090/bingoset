@@ -11,3 +11,4 @@ bingoset.egg-info/requires.txt
 bingoset.egg-info/top_level.txt
 bingoset/utilities/__init__.py
 bingoset/utilities/checks.py
+bingoset/utilities/config.py

@@ -1,16 +1,12 @@
-import json
-from configparser import ConfigParser
-
 import typer
 from pathlib import Path
+
+from bingoset.utilities.config import read_config
 
 APP_NAME = "bing-img-search"
 app_dir = typer.get_app_dir(APP_NAME)
 app_dir = Path(app_dir)
 config_path = app_dir / "config.cfg"
-
-config = ConfigParser()
-config.read(config_path)
 
 
 def check_config():
@@ -22,11 +18,7 @@ def check_config():
         typer.echo("Bing image search api key not set")
         raise typer.Exit()
 
-    # with open(config_path) as file:
-    #     config_data = json.load(file)
-    #     BING_API_KEY = config_data["bing_api"]
-    config.read(config_path)
-    BING_API_KEY = config.get('main', 'bing_api')
+    BING_API_KEY = read_config('main', 'bing_api', 'str')
 
     if BING_API_KEY:
         return BING_API_KEY
