@@ -1,6 +1,6 @@
 <h4 align="center">
     <a href="https://github.com/Akshay090/bingoset">
-        <img src="" alt="bingoset" />
+        <img src="https://raw.githubusercontent.com/Akshay090/bingoset/master/.github/bingoset-banner.png" alt="bingoset" />
     </a>
     <br>
     <br>
