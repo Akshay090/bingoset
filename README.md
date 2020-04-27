@@ -4,7 +4,11 @@
     </a>
     <br>
     <br>
+     CLI Toolkit to quickly create image dataset using Bing Image Search API
+
+![Twitter Follow](https://img.shields.io/twitter/follow/aks2899?style=social)
+</h4>
 
 # Welcome to BingoSet 
-## CLI Toolkit to quickly create image dataset using Bing image search api
+
 
