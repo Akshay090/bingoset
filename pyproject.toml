@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bingoset"
-version = "0.1.1"
+version = "0.1.4"
 description = ""
 authors = ["Akshay Ashok <aks28id@gmail.com>"]
 readme = "README.md"

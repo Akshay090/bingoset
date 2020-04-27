@@ -35,14 +35,24 @@ bingoset q pikachu
 ```
 This will download 250 (default) images of pikachu into a directory called dataset (default)
 
-## Additional Config
+## Additional/Optional Config
 
 ```sh
 bingoset set-max-results 100
 ```
-Change the number of images you want to download, eg : 100
+Change the maximum number of images per request by the Bing API, eg : 100
+DEFAULT : 250
 
 ```sh
 bingoset set-group-size 20
 ```
 Change the group size of images you want to download, eg : 100
+groupsize is number of search results to return “per page”
+DEFAULT : 50
+
+
+```sh
+bingoset set-base-folder-name mydatast
+```
+Change the base folder name
+DEFAULT : dataset

@@ -22,7 +22,7 @@ def write_config_file():
 # Initialize Default Config
 def initialize_config():
     if not os.path.exists(config_path):
-        config['main'] = {'MAX_RESULTS': '250', 'GROUP_SIZE': '50'}
+        config['main'] = {'MAX_RESULTS': '250', 'GROUP_SIZE': '50', 'BASE_FOLDER_NAME': 'dataset'}
         write_config_file()
 
 

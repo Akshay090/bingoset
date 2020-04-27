@@ -13,7 +13,7 @@ from bingoset.utilities.checks import check_config
 # GROUP_SIZE = 50
 
 
-def get_images_bing(search_term, MAX_RESULTS, GROUP_SIZE):
+def get_images_bing(search_term, MAX_RESULTS, GROUP_SIZE, BASE_FOLDER_NAME):
     API_KEY = check_config()
 
     URL = "https://api.cognitive.microsoft.com/bing/v7.0/images/search"
@@ -74,7 +74,7 @@ def get_images_bing(search_term, MAX_RESULTS, GROUP_SIZE):
                 url_path = urlparse(v["contentUrl"]).path
                 ext = os.path.splitext(url_path)[1]
 
-                dataset_path = Path.cwd() / "dataset" / search_term
+                dataset_path = Path.cwd() / BASE_FOLDER_NAME / search_term
                 path_out_img = dataset_path / f"{str(total).zfill(8)}{ext}"
                 dataset_path.mkdir(parents=True, exist_ok=True)
 

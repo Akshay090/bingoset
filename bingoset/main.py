@@ -1,8 +1,4 @@
-import json
-
 import typer
-import os
-
 from bingoset.search_bing_api import get_images_bing
 from bingoset.utilities.config import write_config, read_config, initialize_config
 
@@ -29,7 +25,7 @@ def set_api_key(api_key: str):
 @app.command()
 def set_max_results(max_number: int):
     """
-      Set Max Image number : Default is 250
+      Set Max images per request : Default is 250
       """
     write_config('main', 'max_results', max_number)
 
@@ -43,10 +39,19 @@ def set_group_size(group_size: str):
 
 
 @app.command()
+def set_base_folder_name(folder_name: str):
+    """
+      Set Base folder name : default dataset
+      """
+    write_config('main', 'BASE_FOLDER_NAME', folder_name)
+
+
+@app.command()
 def q(query: str):
     """
       Search query to search Bing Image API for
       """
     MAX_RESULTS = read_config('main', 'max_results', 'int')
     GROUP_SIZE = read_config('main', 'group_size', 'int')
-    get_images_bing(query, MAX_RESULTS, GROUP_SIZE)
+    BASE_FOLDER_NAME = read_config('main', 'BASE_FOLDER_NAME', 'str')
+    get_images_bing(query, MAX_RESULTS, GROUP_SIZE, BASE_FOLDER_NAME)
